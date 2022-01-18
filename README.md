@@ -8,7 +8,7 @@ Build the **router** and the **createOne** controller for the Books and Pets dat
 2. Clone the forked repository onto your local machines
 3. In the root directory, type `npm install`, which installs dependencies for the project
 
-You have some additional steps to do to setup this exercise:
+You have some additional setup steps for this one:
 
 4. In ElephantSQL, create a new instance
 
