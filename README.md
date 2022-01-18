@@ -13,7 +13,6 @@ You have some additional steps to do to setup this exercise:
 4. In ElephantSQL, create a new instance
 
 ![](images/elephaphantSQLInstance.png)
-
 _Figure 1: A new ElephantSQL database instance_
 
 5. Copy the URL of your new instance
