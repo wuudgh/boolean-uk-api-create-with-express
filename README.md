@@ -14,9 +14,11 @@ You have some additional steps to do to setup this exercise:
 
 ![](images/elephaphantSQLInstance.png)
 
+_Figure 1: A new ElephantSQL database instance_
+
 5. Copy the URL of your new instance
 
-6. Create the file `.env` in the root directory It should contain a single line, which specifies the url from the instance createed above, e.g (where the starts will contain your password):
+6. Create the file `.env` in the root directory. It should contain a single line, which contains the environment variable used to specify the url from the instance created above; e.g (where the stars below will contain your password):
 
 ```env
 PGURL = "postgres://zzlrlrtu:****@tyke.db.elephantsql.com/zzlrlrtu" 
@@ -24,9 +26,13 @@ PGURL = "postgres://zzlrlrtu:****@tyke.db.elephantsql.com/zzlrlrtu"
 
 Finally:
 
-7. type `npm start`, which starts a development server that will reload whenever you make any changes to source files. All being well, you will have a terminal window that looks like the following:
+7. type `npm start`, which starts a development server that will reload whenever you make any changes to source files. 
+
+All being well, you will have a terminal window that looks like the following:
 
 ![](images/terminal.png)
+
+_Figure 2: The terminal window where the express server is running successfully_
 
 ## Instructions
 
@@ -37,7 +43,7 @@ Finally:
 
 ## Tips
 
-- Take a look inside the `model` to see what data types you are working with.
+- Take a look inside the `model` to see what data types with which you are working with.
 - Use ElephantSQL to check if your requests are succesfully creating rows in the database (there will be mockData stored in there already).
 
 ## Extra Challenge 1
