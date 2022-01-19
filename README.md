@@ -25,7 +25,7 @@ PGURL = "postgres://zzlrlrtu:****@tyke.db.elephantsql.com/zzlrlrtu"
 
 Finally:
 
-7. type `npm start`, which starts a development server that will reload whenever you make any changes to source files. 
+7. Type `npm start`, which starts a development server that will reload whenever you make any changes to source files. 
 
 All being well, you will have a terminal window that looks like the following:
 
