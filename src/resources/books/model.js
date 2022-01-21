@@ -1,3 +1,4 @@
+const { query } = require("express");
 const db = require("../../utils/database");
 const { buildBooksDatabase } = require("../../utils/mockData");
 
@@ -43,5 +44,42 @@ function Book() {
     mockData();
   });
 }
+async function createOneBook(bookData) {
+  const createBookSql = `
+      INSERT INTO books
+        (title, type, author, topic, publicationDate)
+      VALUES
+        ($1, $2, $3, $4, $5)
+    `;
+  const data = [
+    bookData.title,
+    bookData.type,
+    bookData.author,
+    bookData.topic,
+    bookData.publicationDate,
+  ];
+  return db
+    .query(createBookSql, data)
+    .then((res) => {
+      console.log("my result", res);
+    })
+    .catch("my error", console.error);
+}
 
-module.exports = Book;
+async function getAll(res) {
+  const getAll = `
+  SELECT * 
+   FROM books;
+   `;
+
+  return db
+    .query(getAll)
+    .then((result) => result.rows)
+    .catch(console.error);
+}
+
+module.exports = {
+  Book,
+  createOneBook,
+  getAll,
+};

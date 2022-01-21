@@ -3,10 +3,12 @@ const morgan = require("morgan");
 const bodyParser = require("body-parser");
 
 const db = require("./utils/database");
-const Book = require("./resources/books/model");
+const { Book } = require("./resources/books/model");
 const Pet = require("./resources/pets/model");
 
 /* IMPORT ROUTERS */
+const booksRouter = require("./resources/books/router");
+//const petRouter = require("./resources/pet/router");
 
 const app = express();
 
@@ -16,6 +18,7 @@ app.use(morgan("dev"));
 app.use(bodyParser.json());
 
 /* SETUP ROUTES */
+app.use("/books", booksRouter);
 
 /* CATCH-ALL TO TEST ROUTES */
 
